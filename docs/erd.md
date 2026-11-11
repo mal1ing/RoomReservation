@@ -24,6 +24,11 @@ erDiagram
 | rooms | 방 이름과 시설 설명 |
 | reservations | 누가 어떤 방을 언제 예약했는지 기록 |
 | room_policies | 방별 정원·요금·운영시간·취소 기한과 적용일 |
+| social_accounts | 내부 회원과 네이버 계정 연결 |
+| payments | 예약에 대한 결제 시도 |
+| refunds | 결제 환불 요청 및 결과 |
+| complaints | 예약 관련 불편 사항 |
+| complaint_responses | 불편 사항에 대한 관리자 답변 |
 
 ## rooms — 공간 기본 정보
 
