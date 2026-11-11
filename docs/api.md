@@ -42,7 +42,7 @@ HTTP 200 OK
 ### 입력 검증
 
 - date는 YYYY-MM-DD 형식의 유효한 날짜여야 한다.
-- 과거 날짜는 한국 날짜 기준으로 조회할 수 없다.
+- 과거 날짜 조회의 허용 여부는 미정이다.
 - attendees는 1 이상의 정수여야 한다.
 - 필수 파라미터가 누락되면 입력 오류를 반환한다.
 
@@ -118,9 +118,6 @@ HTTP 200 OK
 ## 방 이용 가능 시간 조회
 
 ### 요청
-
-경로: GET /api/rooms/{room_id}/availability
-예시: GET /api/rooms/1/availability?date=2026-11-20
 
 인증: 불필요
 
