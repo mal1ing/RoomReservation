@@ -80,3 +80,15 @@ docker compose start db
 중지해도 데이터는 Docker 볼륨에 유지된다.
 POSTGRES_PASSWORD는 최초 DB 초기화에 사용된다.
 이후 .env 값만 바꿔도 기존 DB의 비밀번호가 변경되지는 않는다.
+
+## FastAPI DB 상태 확인
+
+GET /health/db는 DB에 SELECT 1을 실행한다.
+성공 시 200, DB 연결 오류·설정 누락 시 503을 반환하도록 구현했다.
+GET /health는 DB를 검사하지 않는다.
+
+### 수동 확인 결과
+
+- DB 중지 시 오류 안내 JSON 반환 확인
+- DB 재시작 후 정상 JSON 응답 복구 확인
+- HTTP 상태 코드는 별도 확인 전
